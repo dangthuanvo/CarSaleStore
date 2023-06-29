@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="846a0115d6674222806e0525743a33c0" Name="Diagram1">
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.ACCOUNT" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.CUSTOMER" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.EMPLOYEE" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.EMPLOYEE_PAYMENT_DETAIL" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.IMPORTRECEIPT" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.IMPORTRECEIPTINFO" Width="1.5" PointX="12.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.MAINTENANCEBILL" Width="1.5" PointX="9.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.ORDERBILL" Width="1.5" PointX="12.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.PRODUCER" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.PRODUCT" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.RANK_MONEY" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.SELLBILL" Width="1.5" PointX="9.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CARSALESSYSTEMModel.TYPEPRODUCT" Width="1.5" PointX="5.25" PointY="22.625" IsExpanded="true" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_TAIKHOANKH_TAIKHOAN" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_TAIKHOANNV_TAIKHOAN" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAKHBT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAKHMH" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAOB_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_RANKKH_RANK" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK__EMPLOYEE___EMP_I__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAHDNH_NV" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MANVBT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MANVMH" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_HDNH_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MACTHDNH_HDNH" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MACTHDNH_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MASPBT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAOB_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MAOB_RANK" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MANSXSP_MANSX" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MALOAISP_MALOAI" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MASPMH" ManuallyRouted="false" />
+        <AssociationConnector Association="CARSALESSYSTEMModel.FK_MARANKMH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

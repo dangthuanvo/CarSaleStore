@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{562B5846-110E-4245-8BD6-CBA2C1516EB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarSalesSystem</RootNamespace>
+    <AssemblyName>CarSalesSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Icons8.UI, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Icons8.UI.0.2.0\lib\net40\Icons8.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.BootstrapIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.BootstrapIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.BoxIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.BoxIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Codicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Codicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Coolicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Coolicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Entypo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Entypo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.EvaIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.EvaIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FeatherIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.FeatherIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FileIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.FileIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontaudio, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Fontaudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FontAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.FontAwesome.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontisto, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Fontisto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.ForkAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.ForkAwesome.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Ionicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Ionicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.JamIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.JamIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialDesign, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.MaterialDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialLight, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.MaterialLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Microns, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Microns.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Modern, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Modern.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Octicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Octicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PicolIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.PicolIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PixelartIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.PixelartIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RadixIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.RadixIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RemixIcon, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.RemixIcon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RPGAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.RPGAwesome.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.SimpleIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.SimpleIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Typicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Typicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Unicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Unicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.VaadinIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.VaadinIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.WeatherIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.WeatherIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Zondicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.4.11.0\lib\net47\MahApps.Metro.IconPacks.Zondicons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.9.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.0.9\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.2.5.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.MahApps.0.2.5\lib\net462\MaterialDesignThemes.MahApps.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.6.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ToastNotifications, Version=2.5.1.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>packages\ToastNotifications.2.5.1\lib\net40\ToastNotifications.dll</HintPath>
+    </Reference>
+    <Reference Include="ToastNotifications.Messages, Version=2.5.1.0, Culture=neutral, PublicKeyToken=e89d9d7314a7c797, processorArchitecture=MSIL">
+      <HintPath>packages\ToastNotifications.Messages.2.5.1\lib\net40\ToastNotifications.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Admin\Pages\Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\CheckCompleteMaintainceControl.xaml.cs">
+      <DependentUpon>CheckCompleteMaintainceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\CheckOrderUserControl.xaml.cs">
+      <DependentUpon>CheckOrderUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ListPay.xaml.cs">
+      <DependentUpon>ListPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\OrderControl.xaml.cs">
+      <DependentUpon>OrderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\EmployeeControl.xaml.cs">
+      <DependentUpon>EmployeeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ImportControl.xaml.cs">
+      <DependentUpon>ImportControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ImportReceiptControl.xaml.cs">
+      <DependentUpon>ImportReceiptControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ListItemBuy.xaml.cs">
+      <DependentUpon>ListItemBuy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ProductControl.xaml.cs">
+      <DependentUpon>ProductControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\AddAndUpdateProducer.xaml.cs">
+      <DependentUpon>AddAndUpdateProducer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\BuyProductEmp.xaml.cs">
+      <DependentUpon>BuyProductEmp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\Editemp.xaml.cs">
+      <DependentUpon>Editemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\EditProduct.xaml.cs">
+      <DependentUpon>EditProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\ImportProduct.xaml.cs">
+      <DependentUpon>ImportProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\InfoImportWindow.xaml.cs">
+      <DependentUpon>InfoImportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\ListImportWindow.xaml.cs">
+      <DependentUpon>ListImportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\ListOfMaintaince.xaml.cs">
+      <DependentUpon>ListOfMaintaince.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\ListOfOrder - Copy.xaml.cs">
+      <DependentUpon>ListOfPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\ListOfOrder.xaml.cs">
+      <DependentUpon>ListOfOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\OrderBillConfirm.xaml.cs">
+      <DependentUpon>OrderBillConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\SalaryOfEmployee.xaml.cs">
+      <DependentUpon>SalaryOfEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\SettingSalary.xaml.cs">
+      <DependentUpon>SettingSalary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\TotalFeeMaintaine.xaml.cs">
+      <DependentUpon>TotalFeeMaintaine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\UpdateRankMoney.xaml.cs">
+      <DependentUpon>UpdateRankMoney.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Pages\Tracking.xaml.cs">
+      <DependentUpon>Tracking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Windows\MaintenanceBill.xaml.cs">
+      <DependentUpon>MaintenanceBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FutureDay.cs" />
+    <Compile Include="Model\ACCOUNT.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CarSale.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarSale.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CarSale.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CarSale.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarSale.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CUSTOMER.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EMPLOYEE.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EMPLOYEE_PAYMENT_DETAIL.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IMPORTRECEIPT.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IMPORTRECEIPTINFO.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MAINTENANCEBILL.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ORDERBILL.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PRODUCER.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PRODUCT.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RANK_MONEY.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SELLBILL.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TYPEPRODUCT.cs">
+      <DependentUpon>CarSale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Viewmodel\AccountInfo.cs" />
+    <Compile Include="Viewmodel\BaseViewModel.cs" />
+    <Compile Include="Viewmodel\OrderViewModel.cs" />
+    <Compile Include="Viewmodel\RankInfo.cs" />
+    <Compile Include="Viewmodel\ControlBarViewModel.cs" />
+    <Compile Include="Viewmodel\Converter.cs" />
+    <Compile Include="Viewmodel\CustomerViewModel.cs" />
+    <Compile Include="Viewmodel\EmployeeViewModel.cs" />
+    <Compile Include="Viewmodel\MainWindowViewModel.cs" />
+    <Compile Include="Viewmodel\ProductViewModel.cs" />
+    <Page Include="Admin\Pages\Order.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Pages\Customer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\Employee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\Product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Pages\Warehouse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\CarCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\CheckCompleteMaintainceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\CheckOrderUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\ControlBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\ListPay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\OrderControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\CustomerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\EmployeeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\ImportControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\ImportReceiptControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\InfoCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\ListItemBuy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\User Controls\ProductControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\User Controls\UnitChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\AddAndUpdateProducer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\Addemp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\Addproduct.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\BuyProductEmp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\EditCustomer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\Editemp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\EditProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\ImportProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\InfoImportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\ListImportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Windows\ListOfMaintaince.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\ListOfPay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\ListOfOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\OrderBillConfirm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\SalaryOfEmployee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\SettingSalary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\TotalFeeMaintaine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\Updateemp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin\Windows\UpdateRankMoney.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Pages\Tracking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Customer\Pages\Bill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Pages\InfoCus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Pages\Store.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Windows\DetailCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Windows\MaintenanceBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\Windows\OrderBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\OTPConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\FillingInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\SuccessfulMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="General\Windows\WpfMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Admin\Pages\Customer.xaml.cs">
+      <DependentUpon>Customer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Product.xaml.cs">
+      <DependentUpon>Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pages\Warehouse.xaml.cs">
+      <DependentUpon>Warehouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\CarCard.xaml.cs">
+      <DependentUpon>CarCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\ControlBar.xaml.cs">
+      <DependentUpon>ControlBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\CustomerControl.xaml.cs">
+      <DependentUpon>CustomerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\InfoCard.xaml.cs">
+      <DependentUpon>InfoCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User Controls\UnitChart.xaml.cs">
+      <DependentUpon>UnitChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\Addemp.xaml.cs">
+      <DependentUpon>Addemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\Addproduct.xaml.cs">
+      <DependentUpon>Addproduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\EditCustomer.xaml.cs">
+      <DependentUpon>EditCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Windows\Updateemp.xaml.cs">
+      <DependentUpon>Updateemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Customer\Pages\Bill.xaml.cs">
+      <DependentUpon>Bill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Pages\InfoCus.xaml.cs">
+      <DependentUpon>InfoCus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Pages\Store.xaml.cs">
+      <DependentUpon>Store.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Windows\DetailCar.xaml.cs">
+      <DependentUpon>DetailCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Windows\OrderBill.xaml.cs">
+      <DependentUpon>OrderBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Windows\OTPConfirmation.xaml.cs">
+      <DependentUpon>OTPConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Windows\FillingInformation.xaml.cs">
+      <DependentUpon>FillingInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Windows\SuccessfulMessage.xaml.cs">
+      <DependentUpon>SuccessfulMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Windows\WpfMessageBox.xaml.cs">
+      <DependentUpon>WpfMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWindow.xaml.cs">
+      <DependentUpon>CustomerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="General\Windows\SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="General\Windows\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Styles\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\Color.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Resources\Images\Icons\ghim.png" />
+    <Resource Include="Resources\Images\Icons\x.png" />
+    <Resource Include="Resources\Images\Icons\Logo-removebg.png" />
+    <Resource Include="Resources\Images\Icons\SignupLogoRemoveBG.png" />
+    <Resource Include="SignupLogoRemoveBG.png" />
+    <Resource Include="Signup_Logo.png" />
+    <Resource Include="Resources\Images\Icons\LogoRemoveBG.png" />
+    <Resource Include="Resources\Images\Cars\Logos\maserati.png" />
+    <Resource Include="Resources\Images\Cars\Logos\tesla.png" />
+    <Resource Include="Resources\Images\Cars\Logos\toyota.png" />
+    <Resource Include="Resources\Images\Cars\Logos\lexus.png" />
+    <Resource Include="Resources\Images\Icons\maintain.png" />
+    <Resource Include="Resources\Images\Icons\Plus.png" />
+    <Resource Include="Resources\Images\Icons\success.png" />
+    <Resource Include="Resources\Images\Icons\error.png" />
+    <Resource Include="Resources\Images\Icons\information.png" />
+    <Resource Include="Resources\Images\Icons\question.png" />
+    <Resource Include="Resources\Images\Icons\warning.png" />
+    <Resource Include="Resources\Fonts\MochiyPopOne-Regular.ttf" />
+    <Resource Include="Resources\Images\Icons\close.png" />
+    <Resource Include="Resources\Images\Icons\Signup_Logo.png" />
+    <Resource Include="Resources\Fonts\Porsche Regular.ttf" />
+    <Resource Include="Resources\Fonts\Optima Roman.otf" />
+    <Resource Include="Resources\Fonts\DEFTONE.TTF" />
+    <Resource Include="Resources\Images\Icons\Logo.png" />
+    <Resource Include="Resources\Images\Icons\facebook.png" />
+    <Resource Include="Resources\Images\Icons\google.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\CarSale.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CarSale.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\CarSale.edmx.diagram">
+      <DependentUpon>CarSale.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="packages\EntityFramework.6.4.4\.signature.p7s" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.DefaultItems.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\EntityFramework.6.4.4.nupkg" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\init.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\install.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.runtimeconfig.json" />
+    <None Include="packages\FontAwesome.Sharp.6.1.1\.signature.p7s" />
+    <None Include="packages\FontAwesome.Sharp.6.1.1\FontAwesome.Sharp.6.1.1.nupkg" />
+    <None Include="packages\Icons8.UI.0.2.0\.signature.p7s" />
+    <None Include="packages\Icons8.UI.0.2.0\Icons8.UI.0.2.0.nupkg" />
+    <None Include="packages\LiveCharts.0.9.7\.signature.p7s" />
+    <None Include="packages\LiveCharts.0.9.7\LiveCharts.0.9.7.nupkg" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\.signature.p7s" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\LiveCharts.Wpf.0.9.7.nupkg" />
+    <None Include="packages\LiveCharts.Wpf.0.9.7\tools\install.ps1" />
+    <None Include="packages\MaterialDesignColors.2.0.9\.signature.p7s" />
+    <None Include="packages\MaterialDesignColors.2.0.9\MaterialDesignColors.2.0.9.nupkg" />
+    <None Include="packages\MaterialDesignThemes.4.6.1\.signature.p7s" />
+    <None Include="packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" />
+    <Resource Include="Customer\Windows\error.png" />
+    <Resource Include="Customer\Windows\sedan.png" />
+    <Content Include="CarSalesSystem.sql" />
+    <Resource Include="Logo.png" />
+    <Resource Include="LogoRemoveBG.png" />
+    <Content Include="Model\CarSale.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarSale.edmx</DependentUpon>
+      <LastGenOutput>CarSale.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\CarSale.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarSale.edmx</DependentUpon>
+      <LastGenOutput>CarSale.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages\EntityFramework.6.4.4\build\Microsoft.Data.Entity.Build.Tasks.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\Icon.png" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\tools\about_EntityFramework6.help.txt" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.pdb" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\net40\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\net45\LiveCharts.xml" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.dll" />
+    <Content Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.pdb" />
+    <Resource Include="packages\LiveCharts.0.9.7\lib\portable-net45+win8+wp8\LiveCharts.XML" />
+    <Resource Include="packages\LiveCharts.0.9.7\readme.txt" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.pdb" />
+    <Resource Include="packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.XML" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll" />
+    <Content Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.pdb" />
+    <Resource Include="packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.XML" />
+    <Resource Include="packages\MaterialDesignThemes.MahApps.0.2.5\images\MaterialDesignThemes.MahApps.Icon.png" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\net462\MaterialDesignThemes.MahApps.dll" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\net462\MaterialDesignThemes.MahApps.pdb" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\net6.0\MaterialDesignThemes.MahApps.dll" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\net6.0\MaterialDesignThemes.MahApps.pdb" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\netcoreapp3.1\MaterialDesignThemes.MahApps.dll" />
+    <Content Include="packages\MaterialDesignThemes.MahApps.0.2.5\lib\netcoreapp3.1\MaterialDesignThemes.MahApps.pdb" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Design\Microsoft.Xaml.Behaviors.Design.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.pdb" />
+    <Resource Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.xml" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\netcoreapp3.0\Design\Microsoft.Xaml.Behaviors.DesignTools.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\netcoreapp3.0\Microsoft.Xaml.Behaviors.dll" />
+    <Content Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\netcoreapp3.0\Microsoft.Xaml.Behaviors.pdb" />
+    <Resource Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\netcoreapp3.0\Microsoft.Xaml.Behaviors.xml" />
+    <Content Include="packages\ToastNotifications.2.5.1\lib\net40\ToastNotifications.dll" />
+    <Resource Include="packages\ToastNotifications.2.5.1\readme.txt" />
+    <Content Include="packages\ToastNotifications.Messages.2.5.1\lib\net40\ToastNotifications.Messages.dll" />
+    <Content Include="Resources\Fonts\Nexa Bold.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Nexa Light.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Nexa Regular.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Fonts\Oswald-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Oswald-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Oswald-Light.ttf" />
+    <Resource Include="Resources\Fonts\Oswald-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Oswald-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Oswald-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Black.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-BlackItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Italic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Light.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-LightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-MediumItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-ThinItalic.ttf" />
+    <Resource Include="Resources\Fonts\Raleway-VariableFont_wght.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Black.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-BlackItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Bold.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-BoldItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Italic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Light.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-LightItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Medium.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-MediumItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Regular.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-Thin.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\Roboto-ThinItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-Bold.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-BoldItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-Italic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-Light.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-LightItalic.ttf" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\build\Resources\Roboto\RobotoCondensed-Regular.ttf" />
+    <None Include="packages\MaterialDesignThemes.4.6.1\MaterialDesignThemes.4.6.1.nupkg" />
+    <None Include="packages\MaterialDesignThemes.MahApps.0.2.5\.signature.p7s" />
+    <None Include="packages\MaterialDesignThemes.MahApps.0.2.5\MaterialDesignThemes.MahApps.0.2.5.nupkg" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\.signature.p7s" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\Microsoft.Xaml.Behaviors.Wpf.1.1.19.nupkg" />
+    <None Include="packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\tools\Install.ps1" />
+    <None Include="packages\ToastNotifications.2.5.1\.signature.p7s" />
+    <None Include="packages\ToastNotifications.2.5.1\ToastNotifications.2.5.1.nupkg" />
+    <None Include="packages\ToastNotifications.Messages.2.5.1\.signature.p7s" />
+    <None Include="packages\ToastNotifications.Messages.2.5.1\ToastNotifications.Messages.2.5.1.nupkg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\Fonts\Koorkin W04 Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-ExtraLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\Mitr-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Viewmodel\Admin\" />
+    <Folder Include="Viewmodel\Customer\" />
+    <Folder Include="Viewmodel\Employee\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Cars\Logos\bugatti.png" />
+    <Resource Include="Resources\Images\Cars\Logos\chevrolet.png" />
+    <Resource Include="Resources\Images\Cars\Logos\ford.png" />
+    <Resource Include="Resources\Images\Cars\Logos\fordMustang.png" />
+    <Resource Include="Resources\Images\Cars\Logos\lambor.png" />
+    <Resource Include="Resources\Images\Cars\Logos\w motors.png" />
+    <Resource Include="Resources\Images\Cars\Products\Aventador1.jpg" />
+    <Resource Include="Resources\Images\Cars\Products\MenuCar.png" />
+    <Resource Include="Resources\Images\Employee\employee.png" />
+    <Resource Include="Resources\Images\Employee\staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net40\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net45\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net48\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net5.0-windows7.0\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\net6.0-windows7.0\FontAwesome.Sharp.dll" />
+    <Content Include="packages\FontAwesome.Sharp.6.1.1\lib\netcoreapp3.1\FontAwesome.Sharp.dll" />
+    <Content Include="packages\Icons8.UI.0.2.0\lib\net40\Icons8.UI.dll" />
+    <Resource Include="Resources\Images\Icons\sedan.png" />
+    <Resource Include="packages\MaterialDesignColors.2.0.9\images\MaterialDesignColors.Icon.png" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\net462\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\net462\MaterialDesignColors.pdb" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\net6.0\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\net6.0\MaterialDesignColors.pdb" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\netcoreapp3.1\MaterialDesignColors.dll" />
+    <Content Include="packages\MaterialDesignColors.2.0.9\lib\netcoreapp3.1\MaterialDesignColors.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\images\MaterialDesignThemes.Icon.png" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\lib\net462\MaterialDesignThemes.Wpf.xml" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\net6.0\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\net6.0\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\lib\net6.0\MaterialDesignThemes.Wpf.xml" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\netcoreapp3.1\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="packages\MaterialDesignThemes.4.6.1\lib\netcoreapp3.1\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\lib\netcoreapp3.1\MaterialDesignThemes.Wpf.xml" />
+    <Resource Include="packages\MaterialDesignThemes.4.6.1\tools\VisualStudioToolsManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />
+</Project>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Primary Colors -->
+    <SolidColorBrush x:Key="PrimaryBlueColor" Color="#7cc0d8" Opacity="0.5"/>
+    <SolidColorBrush x:Key="PrimaryBlueTextColor" Color="#66b6d2"/>
+    <SolidColorBrush x:Key="PrimaryGrayColor" Color="#134b5f"/>
+    <SolidColorBrush x:Key="NoButtonColor" Color="#E90000"/>
+    <SolidColorBrush x:Key="YesButtonColor" Color="#75D453"/>
+</ResourceDictionary>
