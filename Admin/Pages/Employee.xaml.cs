@@ -57,7 +57,7 @@ namespace CarSalesSystem.Admin.Pages
                 ListPay a = new ListPay();
                 a.tbID.Text = pay.PM_ID;
                 a.tbTime.Text = pay.PAY_DATE.ToString();
-                a.tbEmp.Text = pay.PM_ID.ToString();
+                a.tbEmp.Text = pay.EMP_ID.ToString();
                 a.tbAmount.Text = pay.AMOUNT.ToString();
                 listOfPay.skpPay.Children.Add(a);
             }
